@@ -1,1 +1,105 @@
 Question 1: Write a python function that returns 2sin(x^2)+ln(|x|)+1
+Answer 1: 
+
+def f(x):
+    return 2*math.sin(math.radians(x**2))+math.log(abs(x))+1
+f(13.41640786)
+
+
+
+Question 2: Write a python function that takes
+            A function f(x)
+            A pair of real numbers (a,b)
+            An integer N
+            as input and returns the Riemann sum of f(x) on the interval [a,b] with N equal subdivisions.
+Answer 2:
+
+Question 3: #Pull 100 uniformly random numbers from the interval [0,1] as an array xs.
+            #Add 0 at the beginning of the array, and 1.0 at the end.
+            #Sort the array xs from smallest to the largest.
+            #Calculate its discrete derivative ys, i.e. let yi=xi+1−xi
+
+
+Answer 3: import numpy as np
+          xs=np.random.uniform(0,1,100)
+          n_new=np.append(0,xs) 
+          n_new2=np.append(n_new,1) 
+          np.sort(n_new2)
+          #for i 1 in range(102):
+          #y[i]=n_new2[i]
+
+ 
+
+Question 4: Pull 100 uniformly random numbers from the interval [0,1] into an array xs.
+            Pull 100 random numbers from the Gaussion distribution with μ=0and σ=1.0 into an array ys.
+            Scatter plot xs against ys using matplotlib
+Answer 4:
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+xs=np.random.uniform(0,1,100)
+ys=np.random.normal(0, 1,100)
+plt.scatter(xs, ys)
+
+
+ 
+ 
+ 
+Question 5: #Pull a random 100×100 matrix
+            #Calculate its 100-th power
+            #Calculate its eigen-values
+            #Calculate is Singular Value Decomposition
+Answer 5:
+
+import numpy as np
+from numpy import linalg 
+matrix=np.random.randint(0,10, (100,100)) 
+print(matrix)
+power=linalg.matrix_power(matrix, 100)
+print(power)
+eigenvalue=linalg.eig(matrix)
+e_values, e_vectors = linalg.eig(matrix)
+print(e_values)
+linalg.svd(matrix)
+
+
+
+
+Question 6: Pull the text of a novel by Dickens from the website of Gutenberg Project
+            Remove all non-alphanumeric characters
+            Split the text into words and convert them into lower case
+            Count the number of distinct words in the text
+            Count how many times each word occurs within the text
+
+Answer 6:
+
+
+
+Question 7:#Write a python function CountWords that takes the URL for a text and returns the number of unique words within the text.
+           #Write a python function Top20Words that takes the URL for a text and returns the most frequently appearing top 20 words within the text.
+Answer 7:
+
+
+
+Question 8:  #Pull the IMKB data from UCI using pandas.
+             #Plot the TL based ISE and USD based ISE columns together in the same graph.
+             #Calculate how many times NIKKEI was higher than FTSE
+Answer 8:
+
+import pandas as pd
+#data=pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/00247/data_akbilgic.xlsx", sep=',')
+
+
+
+
+Question 9: Using the networkx library
+            Get the adjacency matrix of the Peterson graph.
+            Calculate its eigen-values and eigen-vectors using the numpy library.
+            Repeat the same for a random 3-regular graph on 10 vertices.
+
+Answer 9:
+
+
+
+ 
